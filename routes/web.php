@@ -17,7 +17,7 @@ use App\Http\Controllers\ProfileController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('front_end.index');
 });
 
 Route::get('/dashboard', function () {
@@ -33,11 +33,21 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/admin/dashboard', [AdminController::class, 'AdminDashboard'])->name('admin.dashboard');
     Route::get('/admin/logout', [AdminController::class, 'AdminDestroy'])->name('admin.logout');
     Route::get('/admin/profile', [AdminController::class, 'viewprofile'])->name('admin.profile');
+    Route::post('/admin/profile/store', [AdminController::class, 'AdminProfileStore'])->name('admin.profile.store');
+    Route::get('/admin/profile/changepassword', [AdminController::class, 'AdminChangePassword'])->name('admin.changepassword');
+    Route::post('/admin/profile/updatepassword', [AdminController::class, 'StorePassword'])->name('admin.change.password');
 });
 Route::middleware(['auth', 'role:vendor'])->group(function () {
     Route::get('/vendor/dashboard', [VendorController::class, 'VendorDashboard'])->name('vendor.dashboard');
+    Route::get('/vendor/logout', [VendorController::class, 'VendorDestroy'])->name('vendor.logout');
+    Route::get('/vendor/profile', [VendorController::class, 'viewprofile'])->name('vendor.profile');
+    Route::post('/vendor/profile/store', [VendorController::class, 'VendorProfileStore'])->name('vendor.profile.store');
+    Route::get('/vendor/profile/changepassword', [VendorController::class, 'VendorChangePassword'])->name('vendor.change.password');
+    Route::post('/vendor/profile/updatepassword', [VendorController::class, 'Storepassword'])->name('vendor.changepassword');
 });
 Route::get('/admin/login', [AdminController::class, 'AdminLogin'])->name('admin.login');
+Route::get('/vendor/login', [VendorController::class, 'VendorLogin'])->name('vendor.login');
+
 
 
 
