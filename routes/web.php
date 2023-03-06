@@ -53,4 +53,5 @@ Route::get('/vendor/login', [VendorController::class, 'VendorLogin'])->name('ven
 
 
 
+
 require __DIR__ . '/auth.php';

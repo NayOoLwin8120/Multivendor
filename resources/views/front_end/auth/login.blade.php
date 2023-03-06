@@ -16,7 +16,6 @@
     <!-- Template CSS -->
     <link rel="stylesheet" href="{{asset('front_end/assets/css/plugins/animate.min.css')}}" />
     <link rel="stylesheet" href="{{asset('front_end/assets/css/main.css?v=5.3')}}" />
-    <link href="{{asset('adminbackend/assets/css/icons.css')}}" rel="stylesheet" />
 </head>
 
 <body>
@@ -56,40 +55,34 @@
                                     <div class="padding_eight_all bg-white">
                                         <div class="heading_s1">
                                             <h1 class="mb-5">Login</h1>
-                                            <p class="mb-30">Don't have an account? <a href="{{url('/register')}}">Create here</a></p>
+                                            <p class="mb-30">Don't have an account? <a href="page-register.html">Create here</a></p>
                                         </div>
-                                        <form method="POST" action="{{ route('login') }}" id="loginform">
-                                            @csrf
+                                        <form method="post">
                                             <div class="form-group">
-                                                <input type="text"  name="email" placeholder="Username or Email *"
-                                             />
+                                                <input type="text" required="" name="email" placeholder="Username or Email *" />
                                             </div>
-                                            <div class="input-group" id="show_hide_password">
-                                                <input
-                                                type="password"
-                                                class="form-control border-end-0"
-                                                id="password"
-                                                value=""
-                                                name="password"
-                                                placeholder="Enter Password"
-
-                                                />
-                                                <a
-                                                href="javascript:;"
-                                                class="input-group-text bg-transparent"
-                                                ><i class="bx bx-hide"></i
-                                                ></a>
+                                            <div class="form-group">
+                                                <input required="" type="password" name="password" placeholder="Your password *" />
                                             </div>
-
+                                            <div class="login_footer form-group">
+                                                <div class="chek-form">
+                                                    <input type="text" required="" name="email" placeholder="Security code *" />
+                                                </div>
+                                                <span class="security-code">
+                                                    <b class="text-new">8</b>
+                                                    <b class="text-hot">6</b>
+                                                    <b class="text-sale">7</b>
+                                                    <b class="text-best">5</b>
+                                                </span>
+                                            </div>
                                             <div class="login_footer form-group mb-50">
                                                 <div class="chek-form">
                                                     <div class="custome-checkbox">
-                                                        <input class="form-check-input" type="checkbox"  name="remember"
-                                                        id="exampleCheckbox1" value="" />
+                                                        <input class="form-check-input" type="checkbox" name="checkbox" id="exampleCheckbox1" value="" />
                                                         <label class="form-check-label" for="exampleCheckbox1"><span>Remember me</span></label>
                                                     </div>
                                                 </div>
-                                                <a class="text-muted" href="{{ route('password.request') }}">Forgot password?</a>
+                                                <a class="text-muted" href="#">Forgot password?</a>
                                             </div>
                                             <div class="form-group">
                                                 <button type="submit" class="btn btn-heading btn-block hover-up" name="login">Log in</button>
@@ -104,14 +97,13 @@
             </div>
         </div>
     </main>
-
     @include('front_end.footer.footer')
     <!-- Preloader Start -->
     <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
             <div class="preloader-inner position-relative">
                 <div class="text-center">
-                    <img src="{{asset('front_end/assets/imgs/theme/loading.gif')}}" alt="" />
+                    <img src="assets/imgs/theme/loading.gif" alt="" />
                 </div>
             </div>
         </div>
@@ -139,36 +131,6 @@
     <!-- Template  JS -->
     <script src="{{asset('front_end/assets/js/main.js?v=5.3')}}"></script>
     <script src="{{asset('front_end/assets/js/shop.js?v=5.3')}}"></script>
-    <!--Password show & hide js -->
-    <script>
-      $(document).ready(function () {
-        $("#show_hide_password a").on("click", function (event) {
-          event.preventDefault();
-          if ($("#show_hide_password input").attr("type") == "text") {
-            $("#show_hide_password input").attr("type", "password");
-            $("#show_hide_password i").addClass("bx-hide");
-            $("#show_hide_password i").removeClass("bx-show");
-          } else if (
-            $("#show_hide_password input").attr("type") == "password"
-          ) {
-            $("#show_hide_password input").attr("type", "text");
-            $("#show_hide_password i").removeClass("bx-hide");
-            $("#show_hide_password i").addClass("bx-show");
-          }
-        });
-        $('#loginform').disableAutoFill();
-      });
-    </script>
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
