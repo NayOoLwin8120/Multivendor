@@ -15,7 +15,7 @@
                                 </form>
                             </div>
                         </div>
-                        <div class="single-hero-slider single-animation-wrap" style="background-image: url(assets/imgs/slider/slider-2.png)">
+                        <div class="single-hero-slider single-animation-wrap" style="background-image: url({{asset('front_end/assets/imgs/slider/slider-2.png')}})">
                             <div class="slider-content">
                                 <h1 class="display-2 mb-40">
                                     Fresh Vegetables<br />

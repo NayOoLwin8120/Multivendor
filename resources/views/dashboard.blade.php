@@ -1,17 +1,104 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>User Dashboard - Easy Shop Online Store </title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/theme/favicon.svg" />
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="{{asset('front_end/assets/css/plugins/animate.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('front_end/assets/css/main.css?v=5.3')}}" />
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
-                    {{ __("You're logged in!") }}
+
+
+ <!-- Toaster -->
+ <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
+ <!-- Toaster   -->
+
+</head>
+
+<body>
+
+   <!-- Quick view -->
+    @include('front_end.header.quickview')
+    @include('front_end.header.header')
+    <!--End header-->
+
+    <main class="main pages">
+      @yield('user')
+    </main>
+
+
+
+ @include('front_end.footer.footer')
+
+    <!-- Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="text-center">
+                    <img src="{{ asset('frontend/assets/imgs/theme/loading.gif') }}" alt="" />
                 </div>
             </div>
         </div>
     </div>
-</x-app-layout>
+   <!-- Vendor JS-->
+   <script src="{{ asset('front_end/assets/js/vendor/modernizr-3.6.0.min.js') }}"></script>
+    <script src="{{ asset('front_end/assets/js/vendor/jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ asset('front_end/assets/js/vendor/jquery-migrate-3.3.0.min.js') }}"></script>
+    <script src="{{ asset('front_end/assets/js/vendor/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('front_end/assets/js/plugins/slick.js') }}"></script>
+    <script src="{{ asset('front_end/assets/js/plugins/jquery.syotimer.min.js') }}"></script>
+    <script src="{{ asset('front_end/assets/js/plugins/waypoints.js') }}"></script>
+    <script src="{{ asset('front_end/assets/js/plugins/wow.js') }}"></script>
+    <script src="{{ asset('front_end/assets/js/plugins/perfect-scrollbar.js') }}"></script>
+    <script src="{{ asset('front_end/assets/js/plugins/magnific-popup.js') }}"></script>
+    <script src="{{ asset('front_end/assets/js/plugins/select2.min.js') }}"></script>
+    <script src="{{ asset('front_end/assets/js/plugins/counterup.js') }}"></script>
+    <script src="{{ asset('front_end/assets/js/plugins/jquery.countdown.min.js') }}"></script>
+    <script src="{{ asset('front_end/assets/js/plugins/images-loaded.js') }}"></script>
+    <script src="{{ asset('front_end/assets/js/plugins/isotope.js') }}"></script>
+    <script src="{{ asset('front_end/assets/js/plugins/scrollup.js') }}"></script>
+    <script src="{{ asset('front_end/assets/js/plugins/jquery.vticker-min.js') }}"></script>
+    <script src="{{ asset('front_end/assets/js/plugins/jquery.theia.sticky.js') }}"></script>
+    <script src="{{ asset('front_end/assets/js/plugins/jquery.elevatezoom.js') }}"></script>
+    <!-- Template  JS -->
+    <script src="{{ asset('front_end/assets/js/main.js?v=5.3') }}"></script>
+    <script src="{{ asset('front_end/assets/js/shop.js?v=5.3') }}"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+<script>
+ @if(Session::has('message'))
+ var type = "{{ Session::get('alert-type','info') }}"
+ switch(type){
+    case 'info':
+    toastr.info(" {{ Session::get('message') }} ");
+    break;
+
+    case 'success':
+    toastr.success(" {{ Session::get('message') }} ");
+    break;
+
+    case 'warning':
+    toastr.warning(" {{ Session::get('message') }} ");
+    break;
+
+    case 'error':
+    toastr.error(" {{ Session::get('message') }} ");
+    break;
+ }
+ @endif
+</script>
+
+
+</body>
+
+</html>

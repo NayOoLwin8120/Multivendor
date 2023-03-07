@@ -12,7 +12,7 @@
                                 <div class="vendor-img-action-wrap">
                                     <div class="vendor-img">
                                         <a href="vendor-details-1.html">
-                                            <img class="default-img" src="assets/imgs/vendor/vendor-1.png" alt="" />
+                                            <img class="default-img" src="{{asset('front_end/assets/imgs/vendor/vendor-1.png')}}" alt="" />
                                         </a>
                                     </div>
                                     <div class="product-badges product-badges-position product-badges-mrg">
@@ -36,7 +36,7 @@
                                     <div class="vendor-info mb-30">
                                         <ul class="contact-infor text-muted">
 
-                                            <li><img src="assets/imgs/theme/icons/icon-contact.svg" alt="" /><strong>Call Us:</strong><span>(+91) - 540-025-124553</span></li>
+                                            <li><img src="{{asset('front_end/assets/imgs/theme/icons/icon-contact.svg')}}" alt="" /><strong>Call Us:</strong><span>(+91) - 540-025-124553</span></li>
                                         </ul>
                                     </div>
                                     <a href="vendor-details-1.html" class="btn btn-xs">Visit Store <i class="fi-rs-arrow-small-right"></i></a>
@@ -49,7 +49,7 @@
                                 <div class="vendor-img-action-wrap">
                                     <div class="vendor-img">
                                         <a href="vendor-details-1.html">
-                                            <img class="default-img" src="assets/imgs/vendor/vendor-2.png" alt="" />
+                                            <img class="default-img" src="{{asset('front_end/assets/imgs/vendor/vendor-2.png')}}" alt="" />
                                         </a>
                                     </div>
                                     <div class="product-badges product-badges-position product-badges-mrg">
@@ -73,7 +73,7 @@
                                     <div class="vendor-info mb-30">
                                         <ul class="contact-infor text-muted">
 
-                                            <li><img src="assets/imgs/theme/icons/icon-contact.svg" alt="" /><strong>Call Us:</strong><span>(+91) - 540-025-124553</span></li>
+                                            <li><img src="{{asset('front_end/assets/imgs/theme/icons/icon-contact.svg')}}" alt="" /><strong>Call Us:</strong><span>(+91) - 540-025-124553</span></li>
                                         </ul>
                                     </div>
                                     <a href="vendor-details-1.html" class="btn btn-xs">Visit Store <i class="fi-rs-arrow-small-right"></i></a>
@@ -86,7 +86,7 @@
                                 <div class="vendor-img-action-wrap">
                                     <div class="vendor-img">
                                         <a href="vendor-details-1.html">
-                                            <img class="default-img" src="assets/imgs/vendor/vendor-3.png" alt="" />
+                                            <img class="default-img" src="{{asset('front_end/assets/imgs/vendor/vendor-3.png')}}" alt="" />
                                         </a>
                                     </div>
                                     <div class="product-badges product-badges-position product-badges-mrg">
@@ -110,7 +110,7 @@
                                     <div class="vendor-info mb-30">
                                         <ul class="contact-infor text-muted">
 
-                                            <li><img src="assets/imgs/theme/icons/icon-contact.svg" alt="" /><strong>Call Us:</strong><span>(+91) - 540-025-124553</span></li>
+                                            <li><img src="{{asset('front_end/assets/imgs/theme/icons/icon-contact.svg')}}" alt="" /><strong>Call Us:</strong><span>(+91) - 540-025-124553</span></li>
                                         </ul>
                                     </div>
                                     <a href="vendor-details-1.html" class="btn btn-xs">Visit Store <i class="fi-rs-arrow-small-right"></i></a>
@@ -123,7 +123,7 @@
                                 <div class="vendor-img-action-wrap">
                                     <div class="vendor-img">
                                         <a href="vendor-details-1.html">
-                                            <img class="default-img" src="assets/imgs/vendor/vendor-4.png" alt="" />
+                                            <img class="default-img" src="{{asset('front_end/assets/imgs/vendor/vendor-4.png')}}" alt="" />
                                         </a>
                                     </div>
                                     <div class="product-badges product-badges-position product-badges-mrg">
@@ -147,7 +147,7 @@
                                     <div class="vendor-info mb-30">
                                         <ul class="contact-infor text-muted">
 
-                                            <li><img src="assets/imgs/theme/icons/icon-contact.svg" alt="" /><strong>Call Us:</strong><span>(+91) - 540-025-124553</span></li>
+                                            <li><img src="{{asset('front_end/assets/imgs/theme/icons/icon-contact.svg')}}" alt="" /><strong>Call Us:</strong><span>(+91) - 540-025-124553</span></li>
                                         </ul>
                                     </div>
                                     <a href="vendor-details-1.html" class="btn btn-xs">Visit Store <i class="fi-rs-arrow-small-right"></i></a>
