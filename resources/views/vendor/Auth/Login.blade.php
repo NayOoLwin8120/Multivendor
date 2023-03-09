@@ -74,7 +74,7 @@
                       <hr />
                     </div>
                     <div class="form-body">
-                    <form method="POST" class="row g-3" action="{{ route('vendor.login') }}" autocomplete="off
+                    <form method="POST" class="row g-3" action="{{ route('login') }}" autocomplete="off
                     ">
                         @csrf
                         <div class="col-12">

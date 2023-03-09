@@ -15,7 +15,7 @@ class AdminController extends Controller
     {
         return view('admin.index');
     }
-    //Admin Logour Method
+    //Admin Logout Method
     public function AdminDestroy(Request $request)
     {
         Auth::guard('web')->logout();

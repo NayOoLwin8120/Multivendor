@@ -17,6 +17,9 @@
     <link rel="stylesheet" href="{{asset('front_end/assets/css/plugins/animate.min.css')}}" />
     <link rel="stylesheet" href="{{asset('front_end/assets/css/main.css?v=5.3')}}" />
     <link href="{{asset('adminbackend/assets/css/icons.css')}}" rel="stylesheet" />
+    <!-- Toaster -->
+ <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
+ <!-- Toaster   -->
 </head>
 
 <body>
@@ -140,6 +143,8 @@
     <script src="{{asset('front_end/assets/js/main.js?v=5.3')}}"></script>
     <script src="{{asset('front_end/assets/js/shop.js?v=5.3')}}"></script>
     <!--Password show & hide js -->
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
     <script>
       $(document).ready(function () {
         $("#show_hide_password a").on("click", function (event) {
@@ -158,6 +163,25 @@
         });
         $('#loginform').disableAutoFill();
       });
+ @if(Session::has('message'))
+ var type = "{{ Session::get('alert-type','info') }}"
+ switch(type){
+    case 'info':
+    toastr.info(" {{ Session::get('message') }} ");
+    break;
+    case 'success':
+    toastr.success(" {{ Session::get('message') }} ");
+    break;
+    case 'warning':
+    toastr.warning(" {{ Session::get('message') }} ");
+    break;
+    case 'error':
+    toastr.error(" {{ Session::get('message') }} ");
+    break;
+ }
+ @endif
+
+
     </script>
 </body>
 

@@ -23,7 +23,7 @@ class AuthenticatedSessionController extends Controller
     /**
      * Handle an incoming authentication request.
      */
-    public function store(LoginRequest $request): RedirectResponse
+    public function store(LoginRequest $request)
     {
         $request->authenticate();
 
@@ -36,9 +36,9 @@ class AuthenticatedSessionController extends Controller
         $url = '';
         if ($request->user()->role === 'admin') {
             $url = '/admin/dashboard';
-        } else if ($request->user()->role === 'vendor') {
+        } elseif ($request->user()->role === 'vendor') {
             $url = '/vendor/dashboard';
-        } else if ($request->user()->role === 'user') {
+        } elseif ($request->user()->role === 'user') {
             $url = '/dashboard';
         }
 

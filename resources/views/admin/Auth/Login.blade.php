@@ -23,7 +23,7 @@
     <link href="{{asset('adminbackend/assets/css/bootstrap.min.css')}}" rel="stylesheet" />
     <link href="{{asset('adminbackend/assets/css/app.css')}}" rel="stylesheet" />
     <link href="{{asset('adminbackend/assets/css/icons.css')}}" rel="stylesheet" />
-    <title>Vendor | Login</title>
+    <title>Admin | Login</title>
   </head>
 
   <body class="bg-login">
@@ -42,7 +42,7 @@
                 <div class="card-body">
                   <div class="border p-4 rounded">
                     <div class="text-center">
-                      <h3 class=""> Vendor Sign in</h3>
+                      <h3 class=""> Admin Sign in</h3>
                       <p>
                         Don't have an account yet?
                         <a href="authentication-signup.html">Sign up here</a>
