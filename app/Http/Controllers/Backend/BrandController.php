@@ -92,9 +92,10 @@ class BrandController extends Controller
         $brand = Brand::findorFail($id);
 
 
-        if (isset($brand->brand_image)) {
-            unlink($brand->brand_image);
-        }
+        // if ($brand->brand_image == ""  || isset($brand->brand_image)) {
+        //     // @dd($brand->brand_image);
+        //     unlink($brand->brand_image);
+        // }
 
 
         Brand::findorFail($id)->delete();
