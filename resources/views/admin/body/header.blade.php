@@ -324,7 +324,8 @@
 					</div>
 					<div class="user-box dropdown">
 						<a class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							<img src="{{ asset('adminbackend/upload/admin_profile/'.Auth::user()->photo) }}" class="user-img" alt="pp">
+							<img src="{{ (!empty(Auth::user()->photo)) ? url('adminbackend/upload/admin_profile/'.Auth::user()->photo):url('adminbackend/no_image.jpg') }}
+                            " class="user-img" alt="pp">
 							<div class="user-info ps-3">
 								<p class="user-name mb-0">{{Auth::user()->name}}</p>
 								<p class="designattion mb-0">{{Auth::user()->role}}</p>
